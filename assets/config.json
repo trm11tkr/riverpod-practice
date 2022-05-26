@@ -1,0 +1,6 @@
+{
+  "id": 1,
+  "title": "FutureProvider",
+  "isDebug": true,
+  "city": ["Tokyo", "Kyoto"]
+}
