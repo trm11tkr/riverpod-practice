@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_practice/riverpod/provider.dart';
+import 'package:riverpod_practice/riverpod/state_notifier_provider/state_notifier_provider.dart';
 import 'package:riverpod_practice/riverpod/state_provider.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const StateProviderPage(),
+      home: const StateNotifierProviderPage(),
     );
   }
 }
