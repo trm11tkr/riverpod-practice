@@ -34,6 +34,7 @@ class RefreshProviderPage extends ConsumerWidget {
           )
         ],
       ),
+      // <AsyncValue>provider.whenでデータの取得処理
       body: user.when(
         // 非同期処理実行中はインジケーターを表示
         loading: () => const Center(child: CircularProgressIndicator()),
@@ -43,10 +44,12 @@ class RefreshProviderPage extends ConsumerWidget {
             padding: const EdgeInsets.all(5.0),
             child: Column(
               children: [
+                // リフレッシュ処理
                 ElevatedButton(
                     onPressed: () async => ref.refresh(_githubUserProvider),
                     child: const Icon(Icons.refresh),
                 ),
+                // エラー内容
                 Expanded(
                     child: SingleChildScrollView(child: Text('Error: $error, $stack'))),
 
@@ -65,6 +68,7 @@ class RefreshProviderPage extends ConsumerWidget {
               children: [
                 ListTile(
                   title: const Text('login'),
+                  // nullの可能性があるので、強制アンラップ(user!)をする必要がある
                   subtitle: Text('${user!['login'] ?? 'none'}'),
                 ),
                 ListTile(
