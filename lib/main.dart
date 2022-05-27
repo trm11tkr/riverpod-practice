@@ -3,6 +3,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_practice/riverpod/future_provider/future_provider_page.dart';
 import 'package:riverpod_practice/riverpod/listen_provider/listen_provider_page.dart';
 import 'package:riverpod_practice/riverpod/provider_page.dart';
+import 'package:riverpod_practice/riverpod/provider_scope/with_provider_scope.dart';
+import 'package:riverpod_practice/riverpod/provider_scope/without_provider_scope.dart';
 import 'package:riverpod_practice/riverpod/refresh_provider/refresh_provider_page.dart';
 import 'package:riverpod_practice/riverpod/read_provider/read_provider_page.dart';
 import 'package:riverpod_practice/riverpod/state_notifier_provider/state_notifier_provider_page.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ReadProviderPage(),
+      home: const WithProviderScopePage(),
     );
   }
 }
